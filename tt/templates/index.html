@@ -1,0 +1,147 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Video Compressor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎬 Video Compressor</h1>
+
+<div class="card">
+
+<form id="uploadForm">
+
+<div class="upload-box">
+
+<input
+type="file"
+id="video"
+name="video"
+accept="video/*"
+required>
+
+</div>
+
+<h3>Select Compression</h3>
+
+<div class="radio-group">
+
+<label>
+<input
+type="radio"
+name="mode"
+value="small"
+checked>
+
+Small
+</label>
+
+<label>
+
+<input
+type="radio"
+name="mode"
+value="medium">
+
+Medium
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="mode"
+value="verysmall">
+
+Very Small
+
+</label>
+
+</div>
+
+<div class="info">
+
+<p>
+Original Size :
+<span id="originalSize">
+-
+</span>
+</p>
+
+<p>
+Compressed Size :
+<span id="compressedSize">
+-
+</span>
+</p>
+
+</div>
+
+<button
+type="submit"
+id="compressBtn">
+
+Compress Video
+
+</button>
+
+</form>
+
+</div>
+
+<div class="progress-area">
+
+<div class="progress">
+
+<div
+class="progress-bar"
+id="progressBar">
+
+0%
+
+</div>
+
+</div>
+
+<p id="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div
+id="downloadSection"
+style="display:none;">
+
+<a
+id="downloadBtn"
+download>
+
+Download Compressed Video
+
+</a>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static',filename='script.js') }}"></script>
+
+</body>
+</html>
+```
